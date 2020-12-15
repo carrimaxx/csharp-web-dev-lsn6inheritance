@@ -9,6 +9,10 @@ namespace Cats
         public double Weight { get; set; }
         public string Family { get; } = "Felidae";
 
+        public Cat()
+        {
+            Weight = 13.0;
+        }
         public Cat(double weight)
         {
             Weight = weight;
@@ -32,9 +36,14 @@ namespace Cats
             Hungry = false;
         }
 
-        public virtual string Noise()
+        public virtual string Noise() //add virtual if to be override
         {
             return "Meow!";
+        }
+
+        public virtual string Play()
+        {
+            return "Time to annoy the dog!";
         }
 
     }
